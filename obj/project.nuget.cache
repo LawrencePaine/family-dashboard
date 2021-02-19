@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qm8Eak/mmrDH2PeQPIGuFWwb/tCRVhKtHqwj+5rsgMXKPNSEQ7+cIe7x8KlQcICimXICR4IFp+aOT5IFFjwotA==",
+  "dgSpecHash": "k8reJQUDwPopx5B9Suhq9/Ghz8Cgd5FNgva++rCxEYGlNjeJy9jAyAnRX3dZwuoAlyZaDVJS/ntdU7VyIBAqEw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lpain\\source\\repos\\Family Dashboard\\Family Dashboard.csproj",
+  "projectFilePath": "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

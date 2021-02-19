@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lpain\\source\\repos\\Family Dashboard\\Family Dashboard.csproj": {}
+    "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lpain\\source\\repos\\Family Dashboard\\Family Dashboard.csproj": {
+    "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lpain\\source\\repos\\Family Dashboard\\Family Dashboard.csproj",
+        "projectUniqueName": "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj",
         "projectName": "Family Dashboard",
-        "projectPath": "C:\\Users\\lpain\\source\\repos\\Family Dashboard\\Family Dashboard.csproj",
+        "projectPath": "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj",
         "packagesPath": "C:\\Users\\lpain\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lpain\\source\\repos\\Family Dashboard\\obj\\",
+        "outputPath": "C:\\Users\\lpain\\family-dashboard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

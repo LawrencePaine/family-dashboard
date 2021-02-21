@@ -56,3 +56,61 @@ C:\Users\lpain\source\repos\Family Dashboard\obj\Debug\net5.0\ref\Family Dashboa
 C:\Users\lpain\source\repos\Family Dashboard\obj\Debug\net5.0\Family Dashboard.pdb
 C:\Users\lpain\source\repos\Family Dashboard\obj\Debug\net5.0\Family Dashboard.genruntimeconfig.cache
 C:\Users\lpain\source\repos\Family Dashboard\obj\Debug\net5.0\Family Dashboard.csproj.CopyComplete
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\appsettings.json
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Family Dashboard.StaticWebAssets.xml
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Family Dashboard.exe
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Family Dashboard.deps.json
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Family Dashboard.runtimeconfig.json
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Family Dashboard.runtimeconfig.dev.json
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Family Dashboard.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\ref\Family Dashboard.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Family Dashboard.pdb
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Family Dashboard.Views.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Family Dashboard.Views.pdb
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.csprojAssemblyReference.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.AssemblyInfoInputs.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.AssemblyInfo.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.csproj.CoreCompileInputs.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.RazorComponent.input.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.RazorComponent.output.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Family Dashboard.dll
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.TagHelpers.input.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.TagHelpers.output.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.RazorCoreGenerate.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\App.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Pages\_Host.cshtml.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.RazorAssemblyInfo.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.RazorAssemblyInfo.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\staticwebassets\Family Dashboard.StaticWebAssets.Manifest.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\staticwebassets\Family Dashboard.StaticWebAssets.xml
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\scopedcss\bundle\Family Dashboard.styles.css
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\scopedcss\projectbundle\Family Dashboard.bundle.scp.css
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.RazorTargetAssemblyInfo.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.RazorTargetAssemblyInfo.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.Views.pdb
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.dll
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\ref\Family Dashboard.dll
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.pdb
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.genruntimeconfig.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.csproj.CopyComplete

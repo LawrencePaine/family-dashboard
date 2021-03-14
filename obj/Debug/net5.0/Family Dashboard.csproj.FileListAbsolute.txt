@@ -115,3 +115,6 @@ C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.genruntimeconf
 C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.csproj.CopyComplete
 C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Pages\Calendar.razor.g.cs
 C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Pages\Calendar.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.csprojAssemblyReference.cache
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Pages\Header.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Pages\Header.razor.g.cs

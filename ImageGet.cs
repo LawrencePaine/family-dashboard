@@ -7,7 +7,7 @@ using Microsoft.Azure.WebJobs.Extensions.Http;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace BlastOff.Api
+namespace Family_Dashboard
 {
     public class ImageGet
     {

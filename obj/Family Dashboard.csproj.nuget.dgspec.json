@@ -55,6 +55,10 @@
             "Microsoft.NET.Sdk.Functions": {
               "target": "Package",
               "version": "[3.0.11, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.7, )"
             }
           },
           "imports": [

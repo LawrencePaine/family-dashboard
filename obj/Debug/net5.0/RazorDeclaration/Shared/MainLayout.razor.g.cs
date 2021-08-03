@@ -82,6 +82,13 @@ using Family_Dashboard.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\lpain\family-dashboard\Shared\MainLayout.razor"
+using Family_Dashboard.Data;
+
+#line default
+#line hidden
+#nullable disable
     public partial class MainLayout : LayoutComponentBase
     {
         #pragma warning disable 1998
@@ -89,6 +96,23 @@ using Family_Dashboard.Shared;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 74 "C:\Users\lpain\family-dashboard\Shared\MainLayout.razor"
+       
+    private HttpClient ocli = new HttpClient();
+    private Response oresp = new Response();
+    private async Task GetAuthenticationToken()
+    {
+       await  oresp.GetJsonResponse();
+        Console.WriteLine(oresp.GetJsonResponse().Result);
+        //await httpClient.PostJsonAsync("api/contacts", contact);
+
+        //uriHelper.NavigateTo("contacts");
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

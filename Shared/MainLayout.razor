@@ -1,4 +1,5 @@
 ﻿@inherits LayoutComponentBase
+@using Family_Dashboard.Data
 
 <html lang="en">
 <head>
@@ -25,10 +26,14 @@
             <!-- Day Menu -->
             <div class="col-sm-12 col-md-12 col-lg-3">
                 <!-- Add Event -->
-                <div class="card-img">
+                @*<div class="card-img">
 
+                  </div>*@
+                <div class="form-group row">
+                    <div class="col-sm-8">
+                        <button onclick=@GetAuthenticationToken() type="button" class="btn btn-primary">Save</button>
+                    </div>
                 </div>
-
                 <!-- Day Events List -->
                 <div class="ms-depth-16 card">
                     <div class="card-content">
@@ -66,3 +71,15 @@
 </body>
 
 </html>
+@code {
+    private HttpClient ocli = new HttpClient();
+    private Response oresp = new Response();
+    private async Task GetAuthenticationToken()
+    {
+       await  oresp.GetJsonResponse();
+        Console.WriteLine(oresp.GetJsonResponse().Result);
+        //await httpClient.PostJsonAsync("api/contacts", contact);
+
+        //uriHelper.NavigateTo("contacts");
+    }
+}

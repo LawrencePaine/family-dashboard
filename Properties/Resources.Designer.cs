@@ -79,7 +79,7 @@ namespace Family_Dashboard.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://localhost:5001.
+        ///   Looks up a localized string similar to http://localhost:44300.
         /// </summary>
         internal static string RedirectUrl {
             get {
@@ -88,7 +88,7 @@ namespace Family_Dashboard.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://accounts.google.com/o/oauth2/v2/auth?.
+        ///   Looks up a localized string similar to https://accounts.google.com/o/oauth2/auth.
         /// </summary>
         internal static string Url {
             get {

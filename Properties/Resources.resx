@@ -124,9 +124,9 @@
     <value>4LLp31D6MDoBPm_KnoThbCtO</value>
   </data>
   <data name="RedirectUrl" xml:space="preserve">
-    <value>https://localhost:5001</value>
+    <value>http://localhost:44300</value>
   </data>
   <data name="Url" xml:space="preserve">
-    <value>https://accounts.google.com/o/oauth2/v2/auth?</value>
+    <value>https://accounts.google.com/o/oauth2/auth</value>
   </data>
 </root>

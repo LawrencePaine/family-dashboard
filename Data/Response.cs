@@ -35,20 +35,27 @@ namespace Family_Dashboard.Data
                 //string activeURL = Properties.Resources.app
                 //request token
                 RestClient restclient = new RestClient(url);
-                RestRequest request = new RestRequest("request/oauth") { Method = Method.GET };
-                request.AddHeader("Accept", "application/json");
-                request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
+                RestRequest request = new RestRequest(Method.GET);
+                //RestRequest request = new RestRequest("request/oauth") { Method = Method.POST };
+                //restclient.Post(request);
+                //request.Parameters.Clear();
+                request.RequestFormat = DataFormat.Json;
+                //request.AddHeader("Accept", "application/json");
+                //request.AddHeader("Content-Type", "application/x-www-form-urlencoded");
                 request.AddParameter("client_id", client_id);
                 request.AddParameter("client_secret", client_secret);
-                request.AddParameter("grant_type", "client_credentials");
-                request.AddParameter("scope", "https % 3A//www.googleapis.com/auth/drive.metadata.readonly");
-                request.AddParameter("access_type", "offline");
-                request.AddParameter("include_granted_scopes", "true");
+                //request.AddParameter("grant_type", "Authorizatione_Code");
+                request.AddParameter("scope", "https://3A//www.googleapis.com/auth/photoslibrary.readonly");
+                request.AddParameter("approval_prompt", "force");
+                //request.AddParameter("access_type", "offline");
+                //request.AddParameter("include_granted_scopes", "true");
                 request.AddParameter("response_type", "code");
-                request.AddParameter("state", "state_parameter_passthrough_value");
-                request.AddParameter("redirect_uri", "https % 3A//oauth2.example.com/code&");
+                //request.AddParameter("state", "state_parameter_passthrough_value");
+                request.AddParameter("redirect_uri", "https://localhost:44300");
+                
                 Console.WriteLine(request);
-                var tResponse = restclient.Execute(request);
+                IRestResponse tResponse = restclient.Execute(request);
+           
                 var responseJson = tResponse.Content;
                 var token = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseJson)["access_token"].ToString();
                 Console.WriteLine(token);

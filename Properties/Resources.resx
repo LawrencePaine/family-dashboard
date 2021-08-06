@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AuthURL" xml:space="preserve">
+    <value>https://accounts.google.com/o/oauth2/auth</value>
+  </data>
   <data name="ClientID" xml:space="preserve">
     <value>1026430984477-k7a6bilf3e37nd0acsjq9basi8gd1fin.apps.googleusercontent.com</value>
   </data>
@@ -126,7 +129,7 @@
   <data name="RedirectUrl" xml:space="preserve">
     <value>http://localhost:44300</value>
   </data>
-  <data name="Url" xml:space="preserve">
-    <value>https://accounts.google.com/o/oauth2/auth</value>
+  <data name="TokenURL" xml:space="preserve">
+    <value>https://accounts.google.com/o/oauth2/token</value>
   </data>
 </root>

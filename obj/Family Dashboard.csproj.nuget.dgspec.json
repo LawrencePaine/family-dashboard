@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj": {}
+    "C:\\Users\\lpain\\Documents\\GitHub\\family-dashboard\\Family Dashboard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj": {
+    "C:\\Users\\lpain\\Documents\\GitHub\\family-dashboard\\Family Dashboard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj",
+        "projectUniqueName": "C:\\Users\\lpain\\Documents\\GitHub\\family-dashboard\\Family Dashboard.csproj",
         "projectName": "Family Dashboard",
-        "projectPath": "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj",
+        "projectPath": "C:\\Users\\lpain\\Documents\\GitHub\\family-dashboard\\Family Dashboard.csproj",
         "packagesPath": "C:\\Users\\lpain\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lpain\\family-dashboard\\obj\\",
+        "outputPath": "C:\\Users\\lpain\\Documents\\GitHub\\family-dashboard\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
           "C:\\Users\\lpain\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -79,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

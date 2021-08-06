@@ -9,6 +9,8 @@ using RestSharp;
 using RestSharp.Authenticators;
 using System.Resources;
 using System.Reflection;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Family_Dashboard.Data
 {
@@ -28,7 +30,7 @@ namespace Family_Dashboard.Data
 		{
 			try
 			{
-                string url = Properties.Resources.Url;
+                string url = Properties.Resources.AuthURL;
                 string client_id = Properties.Resources.ClientID;
                 string client_secret = Properties.Resources.ClientSecret;
                 
@@ -43,12 +45,14 @@ namespace Family_Dashboard.Data
                 request.AddParameter("redirect_uri", "https://localhost:44300");
                 
                 Console.WriteLine(request);
+                
                 IRestResponse tResponse = restclient.Execute(request);
-           
-                var responseJson = tResponse.Content;
-                var token = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseJson)["access_token"].ToString();
-                Console.WriteLine(token);
-                return token;
+
+               // var responseJson = tResponse.Content;
+                string jsonstring = tResponse.Content;
+                //var token = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseJson)["access_token"].ToString();
+                //Console.WriteLine(token);
+                return jsonstring;
                 //return token.Length > 0 ? token : null;
             }
 			catch (Exception ex)

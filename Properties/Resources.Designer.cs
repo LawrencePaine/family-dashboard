@@ -61,6 +61,15 @@ namespace Family_Dashboard.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://accounts.google.com/o/oauth2/auth.
+        /// </summary>
+        internal static string AuthURL {
+            get {
+                return ResourceManager.GetString("AuthURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1026430984477-k7a6bilf3e37nd0acsjq9basi8gd1fin.apps.googleusercontent.com.
         /// </summary>
         internal static string ClientID {
@@ -88,11 +97,11 @@ namespace Family_Dashboard.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://accounts.google.com/o/oauth2/auth.
+        ///   Looks up a localized string similar to https://accounts.google.com/o/oauth2/token.
         /// </summary>
-        internal static string Url {
+        internal static string TokenURL {
             get {
-                return ResourceManager.GetString("Url", resourceCulture);
+                return ResourceManager.GetString("TokenURL", resourceCulture);
             }
         }
     }

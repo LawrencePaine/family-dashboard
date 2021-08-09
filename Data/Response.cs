@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using RestSharp;
-using RestSharp.Authenticators;
-using System.Resources;
-using System.Reflection;
-using System.Xml;
-using System.Xml.Serialization;
+using Google.Apis;
+using System.Net;
+using System.Web;
 
 namespace Family_Dashboard.Data
 {
 	public class Response
 	{
         private readonly HttpClient httpClient;
+
+        private System.Net.HttpListener _listener = null;
+        private string _accessToken = null;
+        private string _errorResult = null;
+        private string _apiKey = null;
+        private string _clientSecret = null;
+        private string _redirectUri = null;
         public Response()
         {
         }
@@ -30,30 +34,34 @@ namespace Family_Dashboard.Data
 		{
 			try
 			{
-                string url = Properties.Resources.AuthURL;
-                string client_id = Properties.Resources.ClientID;
-                string client_secret = Properties.Resources.ClientSecret;
-                
+				//var client = new RestClient("https://photoslibrary.googleapis.com/v1/albums");
+				//client.Timeout = -1;
+				//var request = new RestRequest(Method.GET);
+				//request.AddHeader("Authorization", "Bearer ya29.a0ARrdaM84Mud6p6KftnPJNxUErxpelxwgr6g5M9q0_pVGRJIaB06sQgx5s1PbemN8uMuk5_66tYs3RHLUIkuLRL0kJw5bl8Hq2tH-8ZHI2VmSA4nYAgbIdgfII9HEwU61nYYjfdTgmXH9TT3d45F8fIiJRiRdPAo");
+				//IRestResponse response = client.Execute(request);
+				//Console.WriteLine(response.Content);
+                Google.Apis.Auth auth = new Google.Apis.Auth
+				string url = Properties.Resources.AuthURL;
+				string client_id = Properties.Resources.ClientID;
+				string client_secret = Properties.Resources.ClientSecret;
+                _redirectUri = Properties.Resources.RedirectUrl.TrimEnd('/');
+                _listener = new System.Net.HttpListener();
+                _listener.Prefixes.Add(Properties.Resources.RedirectUrl + "/");
+                _listener.AuthenticationSchemes = AuthenticationSchemes.Anonymous;
                 RestClient restclient = new RestClient(url);
-                RestRequest request = new RestRequest(Method.GET);
-                request.RequestFormat = DataFormat.Json;
-                request.AddParameter("client_id", client_id);
-                request.AddParameter("client_secret", client_secret);
-                request.AddParameter("scope", "https://3A//www.googleapis.com/auth/photoslibrary.readonly");
-                request.AddParameter("approval_prompt", "force");
-                request.AddParameter("response_type", "code");
-                request.AddParameter("redirect_uri", "https://localhost:44300");
-                
-                Console.WriteLine(request);
-                
-                IRestResponse tResponse = restclient.Execute(request);
+				RestRequest request = new RestRequest(Method.GET);
+				request.RequestFormat = DataFormat.Json;
+				request.AddParameter("client_id", client_id);
+				request.AddParameter("client_secret", client_secret);
+				request.AddParameter("scope", "https://3A//www.googleapis.com/auth/photoslibrary.readonly");
+				request.AddParameter("approval_prompt", "force");
+				request.AddParameter("response_type", "code");
+				request.AddParameter("redirect_uri", "https://localhost:44300");
 
-               // var responseJson = tResponse.Content;
-                string jsonstring = tResponse.Content;
-                //var token = JsonConvert.DeserializeObject<Dictionary<string, object>>(responseJson)["access_token"].ToString();
-                //Console.WriteLine(token);
+				IRestResponse tResponse = restclient.Execute(request);
+                
+				string jsonstring = tResponse.Content;                
                 return jsonstring;
-                //return token.Length > 0 ? token : null;
             }
 			catch (Exception ex)
 			{
@@ -61,6 +69,79 @@ namespace Family_Dashboard.Data
 				throw new Exception();
 			}
             
+        }
+
+        public string GetToken()
+        {
+            var url = string.Format(@"https://api.surveymonkey.net/oauth/authorize?redirect_uri={0}&client_id=sm_sunsoftdemo&response_type=code&api_key=svtx8maxmjmqavpavdd5sg5p",
+                    HttpUtility.UrlEncode(Properties.Resources.RedirectUrl));
+            System.Diagnostics.Process.Start(url);
+
+            _listener.Start();
+            Task.Run(() => ListenLoop(_listener));
+            //AsyncContext.Run(() => ListenLoop(_listener));
+            _listener.Stop();
+
+            if (!string.IsNullOrEmpty(_errorResult))
+                throw new Exception(_errorResult);
+            return _accessToken;
+        }
+
+        private async void ListenLoop(HttpListener listener)
+        {
+            while (true)
+            {
+                var context = await listener.GetContextAsync();
+                var query = context.Request.QueryString;
+                if (context.Request.Url.ToString().EndsWith("favicon.ico"))
+                {
+                    context.Response.StatusCode = (int)HttpStatusCode.NotFound;
+                    context.Response.Close();
+                }
+                else if (query != null && query.Count > 0)
+                {
+                    if (!string.IsNullOrEmpty(query["code"]))
+                    {
+                        _accessToken = await SendCodeAsync(query["code"]);
+                        break;
+                    }
+                    else if (!string.IsNullOrEmpty(query["error"]))
+                    {
+                        _errorResult = string.Format("{0}: {1}", query["error"], query["error_description"]);
+                        break;
+                    }
+                }
+            }
+        }
+
+        private async Task<string> SendCodeAsync(string code)
+        {
+            var GrantType = "authorization_code";
+            //client_secret, code, redirect_uri and grant_type. The grant type must be set to “authorization_code”
+            var client = new HttpClient();
+            client.BaseAddress = new Uri("https://api.surveymonkey.net");
+            var request = new HttpRequestMessage(HttpMethod.Post, string.Format("/oauth/token?api_key={0}", _apiKey));
+
+            var formData = new List<KeyValuePair<string, string>>();
+            formData.Add(new KeyValuePair<string, string>("client_secret", _clientSecret));
+            formData.Add(new KeyValuePair<string, string>("code", code));
+            formData.Add(new KeyValuePair<string, string>("redirect_uri", _redirectUri));
+            formData.Add(new KeyValuePair<string, string>("grant_type", GrantType));
+            formData.Add(new KeyValuePair<string, string>("client_id", "sm_sunsoftdemo"));
+
+            request.Content = new FormUrlEncodedContent(formData);
+            var response = await client.SendAsync(request);
+            if (!response.IsSuccessStatusCode)
+            {
+                _errorResult = string.Format("Status {0}: {1}", response.StatusCode.ToString(), response.ReasonPhrase.ToString());
+                return null;
+            }
+
+            var data = await response.Content.ReadAsStringAsync();
+            if (data == null)
+                return null;
+            Dictionary<string, string> tokenInfo = JsonConvert.DeserializeObject<Dictionary<string, string>>(data);
+            return (tokenInfo["access_token"]);
         }
 
         public async Task<string> GetImages()

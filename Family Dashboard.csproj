@@ -6,6 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Apis" Version="1.53.0" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.53.0" />
+    <PackageReference Include="Google.Apis.Core" Version="1.53.0" />
     <PackageReference Include="IEvangelist.Azure.CosmosRepository" Version="2.1.5" />
     <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.11" />

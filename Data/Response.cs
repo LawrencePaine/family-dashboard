@@ -8,6 +8,8 @@ using RestSharp;
 using Google.Apis;
 using System.Net;
 using System.Web;
+using System.Text;
+using System.IO;
 
 namespace Family_Dashboard.Data
 {
@@ -30,6 +32,37 @@ namespace Family_Dashboard.Data
             this.httpClient = httpClient;
         }
 
+        public string ReceiveTokenGmail()
+        {
+            string postString = "code=" + code + "&client_id=" + Properties.Resources.ClientID + @"&client_secret=" + Properties.Resources.ClientSecret + "&redirect_uri=" + Properties.Resources.RedirectUrl;
+
+            string url = "https://accounts.google.com/o/oauth2/token";
+
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url.ToString());
+            request.Method = "POST";
+            request.ContentType = "application/x-www-form-urlencoded";
+
+            UTF8Encoding utfenc = new UTF8Encoding();
+            byte[] bytes = utfenc.GetBytes(postString);
+            Stream os = null;
+            try
+            {
+                request.ContentLength = bytes.Length;
+                os = request.GetRequestStream();
+                os.Write(bytes, 0, bytes.Length);
+            }
+            catch
+            { }
+            string result = "";
+
+            HttpWebResponse webResponse = (HttpWebResponse)request.GetResponse();
+            Stream responseStream = webResponse.GetResponseStream();
+            StreamReader responseStreamReader = new StreamReader(responseStream);
+            result = responseStreamReader.ReadToEnd();
+
+            return result;
+        }
+
         public async Task<string> GetJsonResponse()
 		{
 			try
@@ -40,7 +73,7 @@ namespace Family_Dashboard.Data
 				//request.AddHeader("Authorization", "Bearer ya29.a0ARrdaM84Mud6p6KftnPJNxUErxpelxwgr6g5M9q0_pVGRJIaB06sQgx5s1PbemN8uMuk5_66tYs3RHLUIkuLRL0kJw5bl8Hq2tH-8ZHI2VmSA4nYAgbIdgfII9HEwU61nYYjfdTgmXH9TT3d45F8fIiJRiRdPAo");
 				//IRestResponse response = client.Execute(request);
 				//Console.WriteLine(response.Content);
-                Google.Apis.Auth auth = new Google.Apis.Auth
+                //Google.Apis.Auth.OAuth2Auth2.Requests auth = new Google.Apis.Auth.OAuth2.Requests
 				string url = Properties.Resources.AuthURL;
 				string client_id = Properties.Resources.ClientID;
 				string client_secret = Properties.Resources.ClientSecret;

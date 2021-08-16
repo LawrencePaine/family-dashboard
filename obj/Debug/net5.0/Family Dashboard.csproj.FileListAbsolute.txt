@@ -115,7 +115,6 @@ C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.genruntimeconf
 C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.csproj.CopyComplete
 C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Pages\Calendar.razor.g.cs
 C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Pages\Calendar.razor.g.cs
-C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.csprojAssemblyReference.cache
 C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Pages\Header.razor.g.cs
 C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Pages\Header.razor.g.cs
 C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Azure.Core.dll
@@ -248,3 +247,13 @@ C:\Users\lpain\Documents\GitHub\family-dashboard\obj\Debug\net5.0\Family Dashboa
 C:\Users\lpain\Documents\GitHub\family-dashboard\obj\Debug\net5.0\ref\Family Dashboard.dll
 C:\Users\lpain\Documents\GitHub\family-dashboard\obj\Debug\net5.0\Family Dashboard.pdb
 C:\Users\lpain\Documents\GitHub\family-dashboard\obj\Debug\net5.0\Family Dashboard.genruntimeconfig.cache
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Google.Apis.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Google.Apis.Auth.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Google.Apis.Core.dll
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.csproj.AssemblyReference.cache
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Properties\calendarcredentials.json
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Properties\client_secret_1026430984477-k7a6bilf3e37nd0acsjq9basi8gd1fin.apps.googleusercontent.com.json
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Google.Apis.Calendar.v3.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\calendarcredentials.json
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\client_secret_1026430984477-k7a6bilf3e37nd0acsjq9basi8gd1fin.apps.googleusercontent.com.json

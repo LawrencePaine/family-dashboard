@@ -82,6 +82,13 @@ using Family_Dashboard.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 1 "C:\Users\lpain\family-dashboard\Pages\Counter.razor"
+using Family_Dashboard.Data;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
     public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -91,13 +98,31 @@ using Family_Dashboard.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\lpain\family-dashboard\Pages\Counter.razor"
+#line 10 "C:\Users\lpain\family-dashboard\Pages\Counter.razor"
        
     private int currentCount = 0;
 
     private void IncrementCount()
     {
         currentCount++;
+    }
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 19 "C:\Users\lpain\family-dashboard\Pages\Counter.razor"
+       
+    private string currentHeading = "Initial heading";
+    private void GetAuthenticationToken(MouseEventArgs args)
+    {
+        currentHeading = "Test";
+        Response oresp = new Response();
+        currentHeading = oresp.GetJsonResponse();
+        Console.WriteLine(oresp.GetJsonResponse());
+        //await httpClient.PostJsonAsync("api/contacts", contact);
+
+        //uriHelper.NavigateTo("contacts");
     }
 
 #line default

@@ -10,6 +10,12 @@ using System.Net;
 using System.Web;
 using System.Text;
 using System.IO;
+using Google.Apis.Auth.OAuth2;
+using System.Threading;
+using Google.Apis.Util.Store;
+using Google.Apis.Services;
+using Google.Apis.Calendar.v3;
+using Google.Apis.Calendar.v3.Data;
 
 namespace Family_Dashboard.Data
 {
@@ -23,6 +29,11 @@ namespace Family_Dashboard.Data
         private string _apiKey = null;
         private string _clientSecret = null;
         private string _redirectUri = null;
+
+        static string[] Scopes = { CalendarService.Scope.Calendar };
+        static string ApplicationName = "Google Calendar API .NET Quickstart";
+
+
         public Response()
         {
         }
@@ -32,37 +43,89 @@ namespace Family_Dashboard.Data
             this.httpClient = httpClient;
         }
 
-        public async Task<string> GetJsonResponse()
+        public string GetJsonResponse()
 		{
 			try
 			{
-				//var client = new RestClient("https://photoslibrary.googleapis.com/v1/albums");
-				//client.Timeout = -1;
-				//var request = new RestRequest(Method.GET);
-				//request.AddHeader("Authorization", "Bearer ya29.a0ARrdaM84Mud6p6KftnPJNxUErxpelxwgr6g5M9q0_pVGRJIaB06sQgx5s1PbemN8uMuk5_66tYs3RHLUIkuLRL0kJw5bl8Hq2tH-8ZHI2VmSA4nYAgbIdgfII9HEwU61nYYjfdTgmXH9TT3d45F8fIiJRiRdPAo");
-				//IRestResponse response = client.Execute(request);
-				//Console.WriteLine(response.Content);
+                //var client = new RestClient("https://photoslibrary.googleapis.com/v1/albums");
+                //client.Timeout = -1;
+                //var request = new RestRequest(Method.GET);
+                //request.AddHeader("Authorization", "Bearer ya29.a0ARrdaM84Mud6p6KftnPJNxUErxpelxwgr6g5M9q0_pVGRJIaB06sQgx5s1PbemN8uMuk5_66tYs3RHLUIkuLRL0kJw5bl8Hq2tH-8ZHI2VmSA4nYAgbIdgfII9HEwU61nYYjfdTgmXH9TT3d45F8fIiJRiRdPAo");
+                //IRestResponse response = client.Execute(request);
+                //Console.WriteLine(response.Content);
                 //Google.Apis.Auth.OAuth2Auth2.Requests auth = new Google.Apis.Auth.OAuth2.Requests
-				string url = Properties.Resources.AuthURL;
-				string client_id = Properties.Resources.ClientID;
-				string client_secret = Properties.Resources.ClientSecret;
-                _redirectUri = Properties.Resources.RedirectUrl.TrimEnd('/');
-                _listener = new System.Net.HttpListener();
-                _listener.Prefixes.Add(Properties.Resources.RedirectUrl + "/");
-                _listener.AuthenticationSchemes = AuthenticationSchemes.Anonymous;
-                RestClient restclient = new RestClient(url);
-				RestRequest request = new RestRequest(Method.GET);
-				request.RequestFormat = DataFormat.Json;
-				request.AddParameter("client_id", client_id);
-				request.AddParameter("client_secret", client_secret);
-				request.AddParameter("scope", "https://3A//www.googleapis.com/auth/photoslibrary.readonly");
-				request.AddParameter("approval_prompt", "force");
-				request.AddParameter("response_type", "code");
-				request.AddParameter("redirect_uri", "https://localhost:44300");
+                //string url = Properties.Resources.AuthURL;
+                //string client_id = Properties.Resources.ClientID;
+                //string client_secret = Properties.Resources.ClientSecret;
+                //            _redirectUri = Properties.Resources.RedirectUrl.TrimEnd('/');
+                //            _listener = new System.Net.HttpListener();
+                //            _listener.Prefixes.Add(Properties.Resources.RedirectUrl + "/");
+                //            _listener.AuthenticationSchemes = AuthenticationSchemes.Anonymous;
+                //            RestClient restclient = new RestClient(url);
+                //RestRequest request = new RestRequest(Method.GET);
+                //request.RequestFormat = DataFormat.Json;
+                //request.AddParameter("client_id", client_id);
+                //request.AddParameter("client_secret", client_secret);
+                //request.AddParameter("scope", "https://3A//www.googleapis.com/auth/photoslibrary.readonly");
+                //request.AddParameter("approval_prompt", "force");
+                //request.AddParameter("response_type", "code");
+                //request.AddParameter("redirect_uri", "https://localhost:44300");
+                //IRestResponse tResponse = restclient.Execute(request);
+                //string jsonstring = tResponse.Content;                
+                string jsonstring = string.Empty;                
+                UserCredential credential;
 
-				IRestResponse tResponse = restclient.Execute(request);
-                
-				string jsonstring = tResponse.Content;                
+                using (var stream =
+                    new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
+                {
+                    // The file token.json stores the user's access and refresh tokens, and is created
+                    // automatically when the authorization flow completes for the first time.
+                    string credPath = "token.json";
+                    credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
+                        GoogleClientSecrets.FromStream(stream).Secrets,
+                        Scopes,
+                        "user",
+                        CancellationToken.None,
+                        new FileDataStore(credPath, true)).Result;
+                    Console.WriteLine("Credential file saved to: " + credPath);
+                }
+
+                // Create Google Calendar API service.
+                var service = new CalendarService(new BaseClientService.Initializer()
+                {
+                    HttpClientInitializer = credential,
+                    ApplicationName = ApplicationName,
+                });
+
+                // Define parameters of request.
+                EventsResource.ListRequest request = service.Events.List("primary");
+                request.TimeMin = DateTime.Now;
+                request.ShowDeleted = false;
+                request.SingleEvents = true;
+                request.MaxResults = 10;
+                request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
+
+                // List events.
+                Events events = request.Execute();
+                Console.WriteLine("Upcoming events:");
+                if (events.Items != null && events.Items.Count > 0)
+                {
+                    foreach (var eventItem in events.Items)
+                    {
+                        string when = eventItem.Start.DateTime.ToString();
+                        if (String.IsNullOrEmpty(when))
+                        {
+                            when = eventItem.Start.Date;
+                        }
+                        Console.WriteLine("{0} ({1})", eventItem.Summary, when);
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No upcoming events found.");
+                }
+                Console.Read();
+
                 return jsonstring;
             }
 			catch (Exception ex)

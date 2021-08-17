@@ -1,8 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>Family_Dashboard</RootNamespace>
+    <UserSecretsId>eee3a606-e062-4295-83e6-a4b218d54201</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +12,7 @@
     <PackageReference Include="Google.Apis.Calendar.v3" Version="1.54.0.2410" />
     <PackageReference Include="Google.Apis.Core" Version="1.54.0" />
     <PackageReference Include="IEvangelist.Azure.CosmosRepository" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.9" />
     <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.13" />
     <PackageReference Include="RestSharp" Version="106.12.0" />

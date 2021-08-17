@@ -257,3 +257,11 @@ C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Properties\client_secret_102643
 C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Google.Apis.Calendar.v3.dll
 C:\Users\lpain\family-dashboard\bin\Debug\net5.0\calendarcredentials.json
 C:\Users\lpain\family-dashboard\bin\Debug\net5.0\client_secret_1026430984477-k7a6bilf3e37nd0acsjq9basi8gd1fin.apps.googleusercontent.com.json
+C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\calendarcredentials.json
+C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\client_secret_1026430984477-k7a6bilf3e37nd0acsjq9basi8gd1fin.apps.googleusercontent.com.json
+C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\Google.Apis.dll
+C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\Google.Apis.Auth.PlatformServices.dll
+C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\Google.Apis.Auth.dll
+C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\Google.Apis.Calendar.v3.dll
+C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\Google.Apis.Core.dll
+C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Google.dll

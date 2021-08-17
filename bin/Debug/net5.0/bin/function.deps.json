@@ -38,6 +38,7 @@
           "Google.Apis.Calendar.v3": "1.54.0.2410",
           "Google.Apis.Core": "1.54.0",
           "IEvangelist.Azure.CosmosRepository": "2.2.0",
+          "Microsoft.AspNetCore.Authentication.Google": "5.0.9",
           "Microsoft.Azure.Functions.Extensions": "1.1.0",
           "Microsoft.NET.Sdk.Functions": "3.0.13",
           "RestSharp": "106.12.0",
@@ -458,6 +459,17 @@
           "Microsoft.AspNetCore.Authentication.Abstractions": "2.1.0",
           "Microsoft.AspNetCore.Http": "2.1.0",
           "Microsoft.AspNetCore.Http.Extensions": "2.1.0"
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Google/5.0.9": {
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Google.dll": {
+            "assemblyVersion": "5.0.9.0",
+            "fileVersion": "5.0.921.36503"
+          }
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Authentication.Google.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authorization/2.1.0": {
@@ -3523,6 +3535,13 @@
       "sha512": "sha512-NKbmBzPW2zTaZLNKkCIL7LMpr4XfXVOPJ5SNzikTe2PX3juLkupb/5oTF45wiw5srUbU6QD0cY9u3jgYUELwnQ==",
       "path": "microsoft.aspnetcore.authentication.core/2.1.0",
       "hashPath": "microsoft.aspnetcore.authentication.core.2.1.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Google/5.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a8M3xwo3ybwr4MBxAKFmaQB+Jm/v5o0VodS35DkerxT9TL8WicJAG4Yb9aBULIHeLoQ9h+bLmyxr++jq72ZiKg==",
+      "path": "microsoft.aspnetcore.authentication.google/5.0.9",
+      "hashPath": "microsoft.aspnetcore.authentication.google.5.0.9.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/2.1.0": {
       "type": "package",

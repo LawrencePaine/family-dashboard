@@ -13,6 +13,7 @@
     <PackageReference Include="Google.Apis.Core" Version="1.54.0" />
     <PackageReference Include="IEvangelist.Azure.CosmosRepository" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="5.0.9" />
     <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.13" />
     <PackageReference Include="RestSharp" Version="106.12.0" />

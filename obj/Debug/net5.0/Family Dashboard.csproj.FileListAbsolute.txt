@@ -281,3 +281,6 @@ C:\Users\lpain\Documents\GitHub\family-dashboard\obj\Debug\net5.0\Razor\Shared\L
 C:\Users\lpain\Documents\GitHub\family-dashboard\obj\Debug\net5.0\Razor\Shared\RedirectToLogin.razor.g.cs
 C:\Users\lpain\Documents\GitHub\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Pages\Authentication.razor.g.cs
 C:\Users\lpain\Documents\GitHub\family-dashboard\obj\Debug\net5.0\Razor\Pages\Authentication.razor.g.cs
+C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\IdentityModel.dll
+C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\System.Text.Json.dll

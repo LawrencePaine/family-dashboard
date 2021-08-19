@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kdC8SaR6VQQkybDJb13MvrAW+zCe19lgEmz0xEQpNBX4j0qLEaR9CL8plg0YbmNU2tk9oIz9HGCmkGpUoT4j0g==",
+  "dgSpecHash": "/Q6BCMa8FgUlD+8bST1ZuZNiNTQIBzXt3frmHmUQETt2DPKeR696HtFe2gnHkCUYxPcXXTYGzSnSL30/zPj4Ow==",
   "success": true,
   "projectFilePath": "C:\\Users\\lpain\\Documents\\GitHub\\family-dashboard\\Family Dashboard.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\lpain\\.nuget\\packages\\google.apis.auth\\1.54.0\\google.apis.auth.1.54.0.nupkg.sha512",
     "C:\\Users\\lpain\\.nuget\\packages\\google.apis.calendar.v3\\1.54.0.2410\\google.apis.calendar.v3.1.54.0.2410.nupkg.sha512",
     "C:\\Users\\lpain\\.nuget\\packages\\google.apis.core\\1.54.0\\google.apis.core.1.54.0.nupkg.sha512",
+    "C:\\Users\\lpain\\.nuget\\packages\\identitymodel\\5.1.0\\identitymodel.5.1.0.nupkg.sha512",
     "C:\\Users\\lpain\\.nuget\\packages\\ievangelist.azure.cosmosrepository\\2.2.0\\ievangelist.azure.cosmosrepository.2.2.0.nupkg.sha512",
     "C:\\Users\\lpain\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.4\\microsoft.aspnet.webapi.client.5.2.4.nupkg.sha512",
     "C:\\Users\\lpain\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.1.0\\microsoft.aspnetcore.authentication.abstractions.2.1.0.nupkg.sha512",
@@ -160,7 +161,8 @@
     "C:\\Users\\lpain\\.nuget\\packages\\system.security.principal.windows\\4.5.0\\system.security.principal.windows.4.5.0.nupkg.sha512",
     "C:\\Users\\lpain\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\lpain\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
-    "C:\\Users\\lpain\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
+    "C:\\Users\\lpain\\.nuget\\packages\\system.text.encodings.web\\5.0.1\\system.text.encodings.web.5.0.1.nupkg.sha512",
+    "C:\\Users\\lpain\\.nuget\\packages\\system.text.json\\5.0.1\\system.text.json.5.0.1.nupkg.sha512",
     "C:\\Users\\lpain\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\lpain\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\lpain\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",

@@ -16,6 +16,7 @@ using Google.Apis.Util.Store;
 using Google.Apis.Services;
 using Google.Apis.Calendar.v3;
 using Google.Apis.Calendar.v3.Data;
+using IdentityModel.Client;
 
 namespace Family_Dashboard.Data
 {
@@ -43,10 +44,25 @@ namespace Family_Dashboard.Data
             this.httpClient = httpClient;
         }
 
-        public string GetJsonResponse()
+        public async Task<string> GetJsonResponseAsync()
 		{
 			try
 			{
+
+                var response = await httpClient.RequestTokenAsync(new TokenRequest
+                {
+                    Address = "https://demo.identityserver.io/connect/token",
+                    GrantType = "custom",
+
+                    ClientId = "client",
+                    ClientSecret = "secret",
+
+                    Parameters =
+                    {
+                        { "custom_parameter", "custom value"},
+                        { "scope", "api1" }
+                    }
+                });
                 //var client = new RestClient("https://photoslibrary.googleapis.com/v1/albums");
                 //client.Timeout = -1;
                 //var request = new RestRequest(Method.GET);

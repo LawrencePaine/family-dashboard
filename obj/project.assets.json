@@ -7812,20 +7812,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lpain\\.nuget\\packages\\": {}
+    "C:\\Users\\lpain\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lpain\\Documents\\GitHub\\family-dashboard\\Family Dashboard.csproj",
+      "projectUniqueName": "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj",
       "projectName": "Family Dashboard",
-      "projectPath": "C:\\Users\\lpain\\Documents\\GitHub\\family-dashboard\\Family Dashboard.csproj",
+      "projectPath": "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj",
       "packagesPath": "C:\\Users\\lpain\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lpain\\Documents\\GitHub\\family-dashboard\\obj\\",
+      "outputPath": "C:\\Users\\lpain\\family-dashboard\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
         "C:\\Users\\lpain\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

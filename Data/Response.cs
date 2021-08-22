@@ -44,7 +44,7 @@ namespace Family_Dashboard.Data
             this.httpClient = httpClient;
         }
 
-        public async Task<string> GetJsonResponseAsync()
+        public async Task<string> GetJsonResponse()
 		{
 			try
 			{

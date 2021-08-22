@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/Q6BCMa8FgUlD+8bST1ZuZNiNTQIBzXt3frmHmUQETt2DPKeR696HtFe2gnHkCUYxPcXXTYGzSnSL30/zPj4Ow==",
+  "dgSpecHash": "IKWOcP45zmVdJXR9EefWmR5mqNkKvbhPAP7F4vDbvFnX2lFX5sAcOigjzuUj6UCZhxZJE3yWtUNUCLU8U/l4RA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lpain\\Documents\\GitHub\\family-dashboard\\Family Dashboard.csproj",
+  "projectFilePath": "C:\\Users\\lpain\\family-dashboard\\Family Dashboard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lpain\\.nuget\\packages\\azure.core\\1.3.0\\azure.core.1.3.0.nupkg.sha512",
     "C:\\Users\\lpain\\.nuget\\packages\\google.apis\\1.54.0\\google.apis.1.54.0.nupkg.sha512",

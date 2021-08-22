@@ -252,8 +252,6 @@ C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Google.Apis.Auth.PlatformServic
 C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Google.Apis.Auth.dll
 C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Google.Apis.Core.dll
 C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Family Dashboard.csproj.AssemblyReference.cache
-C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Properties\calendarcredentials.json
-C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Properties\client_secret_1026430984477-k7a6bilf3e37nd0acsjq9basi8gd1fin.apps.googleusercontent.com.json
 C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Google.Apis.Calendar.v3.dll
 C:\Users\lpain\family-dashboard\bin\Debug\net5.0\calendarcredentials.json
 C:\Users\lpain\family-dashboard\bin\Debug\net5.0\client_secret_1026430984477-k7a6bilf3e37nd0acsjq9basi8gd1fin.apps.googleusercontent.com.json
@@ -284,3 +282,23 @@ C:\Users\lpain\Documents\GitHub\family-dashboard\obj\Debug\net5.0\Razor\Pages\Au
 C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\IdentityModel.dll
 C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\System.Text.Encodings.Web.dll
 C:\Users\lpain\Documents\GitHub\family-dashboard\bin\Debug\net5.0\System.Text.Json.dll
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Pages\Authentication.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Shared\LoginDisplay.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\RazorDeclaration\Shared\RedirectToLogin.razor.g.cs
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\IdentityModel.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Microsoft.AspNetCore.Components.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Microsoft.AspNetCore.Components.WebAssembly.Authentication.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\Microsoft.JSInterop.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\System.IO.Pipelines.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\System.Text.Encodings.Web.dll
+C:\Users\lpain\family-dashboard\bin\Debug\net5.0\System.Text.Json.dll
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Pages\Authentication.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Shared\LoginDisplay.razor.g.cs
+C:\Users\lpain\family-dashboard\obj\Debug\net5.0\Razor\Shared\RedirectToLogin.razor.g.cs

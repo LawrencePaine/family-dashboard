@@ -22,6 +22,8 @@
     {
         currentHeading = "Test";
         Response oresp = new Response();
+        await oresp.GetJsonResponse();
+        Console.WriteLine(oresp.GetJsonResponse().Result);
         Task<string> result = oresp.GetJsonResponse();
         currentHeading = result.Result;
         Console.WriteLine(oresp.GetJsonResponse());

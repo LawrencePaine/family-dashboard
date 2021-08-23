@@ -49,20 +49,25 @@ namespace Family_Dashboard.Data
 			try
 			{
 
-                var response = await httpClient.RequestTokenAsync(new TokenRequest
+                var response = await httpClient.RequestTokenAsync(new ClientCredentialsTokenRequest
                 {
-                    Address = "https://demo.identityserver.io/connect/token",
-                    GrantType = "custom",
+                    Address = Properties.Resources.TokenURL,
 
-                    ClientId = "client",
-                    ClientSecret = "secret",
+                    ClientId = Properties.Resources.ClientID,
+                    ClientSecret = Properties.Resources.ClientSecret,
+                    Scope = "https://www.googleapis.com/auth/calendar"
 
-                    Parameters =
-                    {
-                        { "custom_parameter", "custom value"},
-                        { "scope", "api1" }
-                    }
+                    //Parameters =
+                    //{
+                    //    { "custom_parameter", "custom value"},
+                    //    { "scope", "api1" }
+                    //}
                 });
+                if (response.IsError) throw new Exception(response.Error);
+
+                var token = response.AccessToken;
+                var custom = response.Json.TryGetString("custom_parameter");
+
                 //var client = new RestClient("https://photoslibrary.googleapis.com/v1/albums");
                 //client.Timeout = -1;
                 //var request = new RestRequest(Method.GET);

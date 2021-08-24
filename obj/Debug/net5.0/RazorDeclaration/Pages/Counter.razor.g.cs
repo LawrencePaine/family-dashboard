@@ -114,17 +114,21 @@ using Family_Dashboard.Data;
 #line 19 "C:\Users\lpain\Documents\GitHub\family-dashboard\Pages\Counter.razor"
        
     private string currentHeading = "Initial heading";
-    private void GetAuthenticationToken(MouseEventArgs args)
-    {
-        currentHeading = "Test";
-        Response oresp = new Response();
-        Task<string> result = oresp.GetJsonResponse();
-        currentHeading = result.Result;
-        Console.WriteLine(oresp.GetJsonResponse());
-        //await httpClient.PostJsonAsync("api/contacts", contact);
+    private Response oresp = new Response();
+    private void GetAuthenticationToken(MouseEventArgs args) => oresp.GetJsonResponse();
 
-        //uriHelper.NavigateTo("contacts");
-    }
+    //private async void GetNewAuthenticationToken()
+    //{
+    //    Response oresp = new Response();
+    //    await oresp.GetJsonResponse();
+    //    Task<string> result = oresp.GetJsonResponse();
+    //    currentHeading = result.Result;
+    //    Console.WriteLine(oresp.GetJsonResponse());
+    //    Console.WriteLine(oresp.GetJsonResponse().Result);
+    //    await httpClient.PostJsonAsync("api/contacts", contact);
+
+    //    uriHelper.NavigateTo("contacts");
+    //}
 
 #line default
 #line hidden

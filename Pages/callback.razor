@@ -1,0 +1,16 @@
+﻿@using Family_Dashboard.Data
+@page "/callback"
+
+<h1>Callback page</h1>
+
+<p>AuthToken: @currentCount</p>
+
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

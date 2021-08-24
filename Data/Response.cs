@@ -44,18 +44,19 @@ namespace Family_Dashboard.Data
             this.httpClient = httpClient;
         }
 
-        public async Task<string> GetJsonResponse()
+        public async void GetJsonResponse()
 		{
 			try
 			{
 
-                var response = await httpClient.RequestTokenAsync(new ClientCredentialsTokenRequest
+                var response = await httpClient.RequestTokenAsync(new AuthorizationCodeTokenRequest
                 {
                     Address = Properties.Resources.TokenURL,
-
-                    ClientId = Properties.Resources.ClientID,
-                    ClientSecret = Properties.Resources.ClientSecret,
-                    Scope = "https://www.googleapis.com/auth/calendar"
+                    GrantType = "client_credentials",
+                    ClientId = Properties.Resources.CalenderClientID,
+                    ClientSecret = Properties.Resources.CalenderClientSecret,
+                    //CODE
+                    //Scope = "https://www.googleapis.com/auth/calendar"
 
                     //Parameters =
                     //{
@@ -146,8 +147,6 @@ namespace Family_Dashboard.Data
                     Console.WriteLine("No upcoming events found.");
                 }
                 Console.Read();
-
-                return jsonstring;
             }
 			catch (Exception ex)
 			{

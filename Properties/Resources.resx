@@ -120,6 +120,12 @@
   <data name="AuthURL" xml:space="preserve">
     <value>https://accounts.google.com/o/oauth2/auth</value>
   </data>
+  <data name="CalenderClientID" xml:space="preserve">
+    <value>1026430984477-d7tn39egei8q9b50543fnaifbqd3t3en.apps.googleusercontent.com</value>
+  </data>
+  <data name="CalenderClientSecret" xml:space="preserve">
+    <value>RuD8q9ZHUs66ZtqjEd786g2V</value>
+  </data>
   <data name="ClientID" xml:space="preserve">
     <value>1026430984477-k7a6bilf3e37nd0acsjq9basi8gd1fin.apps.googleusercontent.com</value>
   </data>

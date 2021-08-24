@@ -70,6 +70,24 @@ namespace Family_Dashboard.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 1026430984477-d7tn39egei8q9b50543fnaifbqd3t3en.apps.googleusercontent.com.
+        /// </summary>
+        internal static string CalenderClientID {
+            get {
+                return ResourceManager.GetString("CalenderClientID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RuD8q9ZHUs66ZtqjEd786g2V.
+        /// </summary>
+        internal static string CalenderClientSecret {
+            get {
+                return ResourceManager.GetString("CalenderClientSecret", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 1026430984477-k7a6bilf3e37nd0acsjq9basi8gd1fin.apps.googleusercontent.com.
         /// </summary>
         internal static string ClientID {
